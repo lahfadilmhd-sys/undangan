@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Undangan Pernikahan Fanny & Randi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #2c3e50;
+            background-color: #eef2f5;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: url('body.webp') center center / cover no-repeat fixed #eef2f5;
+            position: relative;
+        }
+
+        /* Video Background Section Layout */
+        .section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px 100px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Glassmorphism Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 24px;
+            padding: 30px 24px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(30, 48, 70, 0.12);
+            color: #2b3a4a;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Typography matching MP4 video styles */
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.8px;
+            color: #1e3046;
+        }
+
+        h1 { font-size: 2rem; margin-bottom: 8px; }
+        h2 { font-size: 1.35rem; margin-bottom: 8px; font-weight: 600; }
+        h3 { font-size: 1.05rem; color: #2d4d68; font-weight: 600; }
+        p  { font-size: 0.92rem; line-height: 1.65; color: #4a5a6a; }
+
+        .calligraphy {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            color: #2d4d68;
+            font-weight: 400;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .arabic-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.9rem;
+            color: #1e3046;
+            direction: rtl;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .arabic-text-lg {
+            font-family: 'Amiri', serif;
+            font-size: 1.35rem;
+            color: #2b4d6e;
+            direction: rtl;
+            line-height: 2.1;
+            margin-bottom: 14px;
+        }
+
+        .sub-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+            color: #3a5a78;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .accent-text {
+            color: #2b4d6e;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+        }
+
+        /* Animated Floating Elements */
+        .birds-svg {
+            width: 80px;
+            height: auto;
+            margin: 0 auto 10px auto;
+            opacity: 0.75;
+            animation: floatBird 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatBird {
+            0% { transform: translateY(0px) scale(1); }
+            100% { transform: translateY(-6px) scale(1.03); }
+        }
+
+        .house-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 12px auto;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(45, 77, 104, 0.15));
+        }
+
+        .pine-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 16px 0;
+            opacity: 0.6;
+        }
+
+        .pine-divider::before, .pine-divider::after {
+            content: '';
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(to right, transparent, #3a5a78, transparent);
+        }
+
+        /* Buttons Styling */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 30px;
+            background: linear-gradient(135deg, #2d4d68 0%, #1e374d 100%);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.92rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 6px 18px rgba(45, 77, 104, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(45, 77, 104, 0.45);
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn-secondary {
+            background: rgba(45, 77, 104, 0.08);
+            color: #2d4d68;
+            border: 1px solid rgba(45, 77, 104, 0.25);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(45, 77, 104, 0.18);
+        }
+
+        /* Event Tag Badge */
+        .event-badge {
+            display: inline-block;
+            background: rgba(45, 77, 104, 0.08);
+            border: 1px solid rgba(45, 77, 104, 0.2);
+            color: #2d4d68;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+
+        /* Countdown Grid */
+        .countdown-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        .countdown-box {
+            background: rgba(45, 77, 104, 0.06);
+            border-radius: 14px;
+            padding: 10px 4px;
+            text-align: center;
+            border: 1px solid rgba(45, 77, 104, 0.15);
+        }
+
+        .countdown-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: block;
+            color: #2d4d68;
+            font-family: 'Cinzel', serif;
+        }
+
+        .countdown-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #5c6f84;
+            margin-top: 2px;
+        }
+
+        /* RSVP Form Inputs */
+        .rsvp-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-size: 0.82rem;
+            color: #334e68;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(45, 77, 104, 0.25);
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c3e50;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: #2d4d68;
+            box-shadow: 0 0 0 3px rgba(45, 77, 104, 0.15);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .alert-message {
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            text-align: center;
+            display: none;
+        }
+
+        .alert-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .alert-error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+        /* Bank Account Cards */
+        .rekening-card {
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 12px;
+            text-align: left;
+            border: 1px solid rgba(45, 77, 104, 0.18);
+        }
+
+        .rekening-bank {
+            font-weight: 700;
+            color: #2d4d68;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .rekening-number {
+            font-size: 1.25rem;
+            letter-spacing: 1.5px;
+            margin: 6px 0;
+            font-family: monospace;
+            color: #1a2b3c;
+            font-weight: 700;
+        }
+
+        /* Toast Popup Notification */
+        #toast {
+            position: fixed;
+            bottom: 85px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2d4d68;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 10000;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        #toast.show { opacity: 1; }
+
+        /* Music Floating Toggle */
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(45, 77, 104, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+
+        .music-control:hover {
+            transform: scale(1.08);
+        }
+
+        .music-control svg {
+            width: 20px;
+            height: 20px;
+            fill: #2d4d68;
+        }
+
+        /* Bottom Navbar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(45, 77, 104, 0.18);
+            border-radius: 35px;
+            padding: 8px 22px;
+            display: flex;
+            gap: 22px;
+            z-index: 9998;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #7a8b9e;
+            text-decoration: none;
+            font-size: 0.65rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item img {
+            width: 20px;
+            height: 20px;
+            filter: opacity(0.5);
+            transition: all 0.2s ease;
+        }
+
+        .nav-item.active, .nav-item:hover {
+            color: #2d4d68;
+        }
+
+        .nav-item.active img, .nav-item:hover img {
+            filter: opacity(1) drop-shadow(0 2px 4px rgba(45,77,104,0.3));
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="backgroundMusic" loop>
+        <source src="music/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Audio Control -->
+    <button class="music-control" id="musicToggle" aria-label="Toggle Music">
+        <svg id="musicIconPlay" viewBox="0 0 24 24" style="display: none;">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="musicIconPause" viewBox="0 0 24 24">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+    </button>
+
+    <div id="toast">Berhasil Disalin!</div>
+
+    <section class="section" id="cover">
+        <video class="video-bg" autoplay muted loop playsinline src="video/1.mp4"></video>
+        <div class="overlay"></div>
+        <div class="content">
+            <!-- Animated Flying Birds Accent matching 1.mp4 -->
+            <svg class="birds-svg" viewBox="0 0 100 40" fill="#2d4d68">
+                <path d="M10 20 Q 25 10, 40 20 Q 55 10, 70 20 Q 55 15, 40 23 Q 25 15, 10 20 Z" opacity="0.8"/>
+                <path d="M65 10 Q 75 3, 85 10 Q 95 3, 105 10 Q 95 6, 85 12 Q 75 6, 65 10 Z" opacity="0.6" transform="scale(0.6) translate(50, -5)"/>
+            </svg>
+
+            <div class="card">
+                <p class="sub-title">Undangan Pernikahan</p>
+                <div class="calligraphy" style="margin: 6px 0;">Fanny & Randi</div>
+                <p style="font-weight: 600; color: #3a5a78; font-size: 0.85rem; letter-spacing: 1.5px; margin-top: 4px;">16, 17 & 24 OKTOBER 2026</p>
+                
+                <div class="pine-divider">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#3a5a78"><path d="M12 2L4 14h4v8h8v-8h4L12 2z"/></svg>
+                </div>
+
+                <div style="margin: 12px 0;">
+                    <p style="font-size: 0.8rem; color: #6a7b8c;">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                    <h2 id="guestName" style="margin-top: 6px; color: #1e3046;">Tamu Undangan</h2>
+                </div>
+
+                <button class="btn" onclick="openInvitation()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    Buka Undangan
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="opening">
+        <video class="video-bg" autoplay muted loop playsinline src="video/2.mp4"></video>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="card">
+                <p class="sub-title">Ar-Rum Ayat 21</p>
+                
+                <!-- Arabic Quran Script matching 2.mp4 -->
+                <div class="arabic-text-lg" style="margin-top: 10px;">
+                    وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+                </div>
+
+                <div class="pine-divider">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#3a5a78"><path d="M12 2L4 14h4v8h8v-8h4L12 2z"/></svg>
+                </div>
+
+                <p style="margin-top: 8px; font-style: italic; line-height: 1.7; font-size: 0.88rem;">
+                    "Di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa cinta dan kasih sayang."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="pengantin">
+        <video class="video-bg" autoplay muted loop playsinline src="video/3.mp4"></video>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="card">
+                <!-- Bismillah Arabic Calligraphy matching 3.mp4 -->
+                <div class="arabic-title">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+                <p style="font-size: 0.82rem; margin-bottom: 16px;">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+
+                <p class="sub-title">Mempelai Wanita</p>
+                <div class="calligraphy">Fanny Yulia Fitri</div>
+                <p style="font-size: 0.85rem; font-weight: 600; color: #2d4d68; margin-bottom: 4px;">(Fanny)</p>
+                <p>Putri keempat dari Bapak Defisyul (Alm.) & Ibu Fitriani</p>
+
+                <div class="pine-divider">
+                    <span style="font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: #2d4d68;">&</span>
+                </div>
+
+                <p class="sub-title">Mempelai Pria</p>
+                <div class="calligraphy">Randi Eka Putra</div>
+                <p style="font-size: 0.85rem; font-weight: 600; color: #2d4d68; margin-bottom: 4px;">(Randi)</p>
+                <p>Putra keempat dari Bapak Darmadi & Ibu Yanti</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="acara">
+        <video class="video-bg" autoplay muted loop playsinline src="video/4.mp4"></video>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="card">
+                <h2>Rangkaian Acara</h2>
+                <div class="pine-divider">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#3a5a78"><path d="M12 2L4 14h4v8h8v-8h4L12 2z"/></svg>
+                </div>
+                
+                <!-- Akad Nikah -->
+                <div style="margin: 12px 0;">
+                    <span class="event-badge">Akad Nikah</span>
+                    <p style="font-weight: 600; color: #1e3046; margin-top: 4px;">Hari Jum'at, 16 Oktober 2026</p>
+                    <p>Pukul 14.00 WIB - Selesai</p>
+                    <p style="font-size: 0.82rem; color: #6a7b8c; margin-top: 2px;">Kediaman Perempuan (Jl. Seranti No. 20 Air Tawar Timur)</p>
+                </div>
+
+                <div class="pine-divider"></div>
+
+                <!-- Resepsi 1 -->
+                <div style="margin: 12px 0;">
+                    <span class="event-badge">Resepsi I</span>
+                    <p style="font-weight: 600; color: #1e3046; margin-top: 4px;">Hari Sabtu, 17 Oktober 2026</p>
+                    <p>Pukul 10.00 WIB - Selesai</p>
+                    <p style="font-size: 0.82rem; color: #6a7b8c; margin-top: 2px;">Kediaman Mempelai Wanita (Jl. Seranti No. 20 Air Tawar Timur)</p>
+                </div>
+
+                <div class="pine-divider"></div>
+
+                <!-- Resepsi 2 -->
+                <div style="margin: 12px 0;">
+                    <span class="event-badge">Resepsi II</span>
+                    <p style="font-weight: 600; color: #1e3046; margin-top: 4px;">Hari Sabtu, 24 Oktober 2026</p>
+                    <p>Pukul 10.00 WIB - Selesai</p>
+                    <p style="font-size: 0.82rem; color: #6a7b8c; margin-top: 2px;">Kediaman Mempelai Pria / Marapulai (Jl. Bawah Asam)</p>
+                </div>
+
+                <!-- Countdown Section -->
+                <div id="countdownSection" style="margin-top: 20px;">
+                    <p class="sub-title">Menuju Hari Bahagia</p>
+                    <div class="countdown-container">
+                        <div class="countdown-box">
+                            <span class="countdown-value" id="cdDays">00</span>
+                            <span class="countdown-label">Hari</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-value" id="cdHours">00</span>
+                            <span class="countdown-label">Jam</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-value" id="cdMinutes">00</span>
+                            <span class="countdown-label">Menit</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-value" id="cdSeconds">00</span>
+                            <span class="countdown-label">Detik</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="eventPassedMessage" style="display: none; margin-top: 15px; font-weight: bold; color: #2d4d68;">
+                    Acara telah selesai
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="lokasi">
+        <video class="video-bg" autoplay muted loop playsinline src="video/5.mp4"></video>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="card">
+                <h2>Lokasi Acara</h2>
+                
+                <!-- House Illustration SVG matching 5.mp4 -->
+                <div style="margin-top: 15px;">
+                    <svg class="house-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 8L6 28H14V54H50V28H58L32 8Z" fill="#2d4d68" opacity="0.15"/>
+                        <path d="M32 10L10 28H16V52H48V28H54L32 10Z" fill="#2d4d68"/>
+                        <path d="M26 36H38V52H26V36Z" fill="#ffffff"/>
+                        <path d="M22 24H28V30H22V24Z" fill="#ffffff"/>
+                        <path d="M36 24H42V30H36V24Z" fill="#ffffff"/>
+                    </svg>
+
+                    <h3>Rumah Mempelai Wanita</h3>
+                    <p style="font-size: 0.78rem; color: #6a7b8c;">(Akad Nikah & Resepsi I)</p>
+                    <p style="margin-top: 6px; font-weight: 500;">Jl. Seranti No. 20 Air Tawar Timur</p>
+                    <button class="btn" style="margin-top: 12px; padding: 10px 22px; font-size: 0.85rem;" onclick="openMapsWanita()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        Lihat Lokasi Wanita
+                    </button>
+                </div>
+
+                <div class="pine-divider"></div>
+
+                <div>
+                    <!-- Second House Icon matching 5.mp4 -->
+                    <svg class="house-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 10L10 28H16V52H48V28H54L32 10Z" fill="#3a5a78"/>
+                        <path d="M26 36H38V52H26V36Z" fill="#ffffff"/>
+                        <path d="M22 24H28V30H22V24Z" fill="#ffffff"/>
+                        <path d="M36 24H42V30H36V24Z" fill="#ffffff"/>
+                    </svg>
+
+                    <h3>Rumah Mempelai Pria</h3>
+                    <p style="font-size: 0.78rem; color: #6a7b8c;">(Resepsi II)</p>
+                    <p style="margin-top: 6px; font-weight: 500;">Jl. Bawah Asam</p>
+                    <button class="btn" style="margin-top: 12px; padding: 10px 22px; font-size: 0.85rem;" onclick="openMapsPria()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        Lihat Lokasi Pria
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="rsvp">
+        <video class="video-bg" autoplay muted loop playsinline src="video/6.mp4"></video>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="card">
+                <h2>Konfirmasi Kehadiran</h2>
+                <p style="font-size: 0.85rem; margin-bottom: 15px; color: #5c6f84;">Mohon konfirmasi kehadiran Anda melalui form berikut.</p>
+                
+                <form class="rsvp-form" id="rsvpForm" onsubmit="handleRSVP(event)">
+                    <div class="form-group">
+                        <label for="rsvpNama">Nama Lengkap</label>
+                        <input type="text" id="rsvpNama" class="form-control" placeholder="Masukkan nama Anda" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rsvpStatus">Konfirmasi Kehadiran</label>
+                        <select id="rsvpStatus" class="form-control" required>
+                            <option value="">-- Pilih Kehadiran --</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rsvpJumlah">Jumlah Tamu</label>
+                        <input type="number" id="rsvpJumlah" class="form-control" min="1" max="5" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rsvpPesan">Ucapan & Doa</label>
+                        <textarea id="rsvpPesan" class="form-control" placeholder="Tuliskan ucapan dan doa Anda..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" id="btnRsvpSubmit" style="margin-top: 10px;">Kirim RSVP</button>
+                    
+                    <div id="rsvpAlertSuccess" class="alert-message alert-success">RSVP berhasil dikirim.</div>
+                    <div id="rsvpAlertError" class="alert-message alert-error">Terjadi kesalahan. Silakan coba lagi.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="gift">
+        <video class="video-bg" autoplay muted loop playsinline src="video/7.mp4"></video>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="card">
+                <h2>Amplop Digital & Gift</h2>
+                <p style="margin-bottom: 16px; font-size: 0.85rem; color: #5c6f84;">Doa restu Anda merupakan karunia terindah. Namun jika ingin memberikan tanda kasih, Anda dapat menggunakan opsi berikut:</p>
+
+                <!-- Rekening 1 -->
+                <div class="rekening-card">
+                    <div class="rekening-bank">BANK BCA</div>
+                    <div class="rekening-number" id="norek1">1234567890</div>
+                    <p style="font-size: 0.82rem; color: #5c6f84;">a.n. Fanny Yulia Fitri</p>
+                    <button class="btn btn-secondary" style="margin-top: 10px; width: 100%; font-size: 0.8rem; padding: 8px;" onclick="copyToClipboard('norek1')">
+                        Salin No. Rekening
+                    </button>
+                </div>
+
+                <!-- Rekening 2 -->
+                <div class="rekening-card">
+                    <div class="rekening-bank">BANK MANDIRI</div>
+                    <div class="rekening-number" id="norek2">0987654321</div>
+                    <p style="font-size: 0.82rem; color: #5c6f84;">a.n. Randi Eka Putra</p>
+                    <button class="btn btn-secondary" style="margin-top: 10px; width: 100%; font-size: 0.8rem; padding: 8px;" onclick="copyToClipboard('norek2')">
+                        Salin No. Rekening
+                    </button>
+                </div>
+
+                <!-- Kirim Kado Fisik -->
+                <div class="rekening-card">
+                    <div class="rekening-bank">Kirim Kado Fisik</div>
+                    <p style="font-size: 0.82rem; margin-top: 5px; color: #5c6f84;">Alamat Mempelai Wanita:</p>
+                    <p style="font-size: 0.85rem; font-weight: 600; color: #2c3e50;" id="alamatKado">Jl. Seranti No. 20 Air Tawar Timur</p>
+                    <button class="btn btn-secondary" style="margin-top: 10px; width: 100%; font-size: 0.8rem; padding: 8px;" onclick="copyText('alamatKado')">
+                        Salin Alamat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="closing">
+        <video class="video-bg" autoplay muted loop playsinline src="video/8.mp4"></video>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="card">
+                <h2>Terima Kasih</h2>
+                <p style="margin: 15px 0; line-height: 1.7; font-size: 0.9rem;">
+                    Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu kepada Putra-Putri kami.
+                </p>
+
+                <div class="pine-divider">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#3a5a78"><path d="M12 2L4 14h4v8h8v-8h4L12 2z"/></svg>
+                </div>
+
+                <p style="font-size: 0.85rem; color: #5c6f84; margin-top: 6px;">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+                <p class="sub-title" style="margin-top: 18px;">Kami yang Berbahagia</p>
+                <div class="calligraphy" style="margin-top: 4px;">Randi & Fanny</div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bottom-nav">
+        <a href="#cover" class="nav-item active">
+            <img src="icon/home.svg" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="#acara" class="nav-item">
+            <img src="icon/calendar.svg" alt="Acara">
+            <span>Acara</span>
+        </a>
+        <a href="#lokasi" class="nav-item">
+            <img src="icon/location.svg" alt="Lokasi">
+            <span>Lokasi</span>
+        </a>
+        <a href="#rsvp" class="nav-item">
+            <img src="icon/rsvp.svg" alt="RSVP">
+            <span>RSVP</span>
+        </a>
+        <a href="#gift" class="nav-item">
+            <img src="icon/gift.svg" alt="Gift">
+            <span>Gift</span>
+        </a>
+    </nav>
+
+    <script>
+        // 1. Tanggal Target Countdown (Akad Nikah: 16 Oktober 2026 Jam 14:00 WIB)
+        const eventDate = new Date("2026-10-16T14:00:00");
+
+        // 2. URL Google Maps Lokasi
+        const mapsUrlWanita = "https://maps.google.com/?q=Jl.+Seranti+No.+20+Air+Tawar+Timur";
+        const mapsUrlPria = "https://maps.google.com/?q=Jl.+Bawah+Asam";
+
+        // 3. URL Google Apps Script RSVP
+        const GOOGLE_SCRIPT_URL = "GANTI_DENGAN_URL_GOOGLE_APPS_SCRIPT";
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const toParam = urlParams.get('to');
+            const guestNameElement = document.getElementById('guestName');
+            
+            if (toParam && toParam.trim() !== "") {
+                guestNameElement.textContent = decodeURIComponent(toParam);
+            } else {
+                guestNameElement.textContent = "Tamu Undangan";
+            }
+
+            initCountdown();
+        });
+
+        const bgMusic = document.getElementById('backgroundMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIconPlay = document.getElementById('musicIconPlay');
+        const musicIconPause = document.getElementById('musicIconPause');
+        let isPlaying = false;
+
+        function playMusic() {
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                musicIconPlay.style.display = 'none';
+                musicIconPause.style.display = 'block';
+            }).catch(error => {
+                console.log("Autoplay ditolak oleh browser:", error);
+            });
+        }
+
+        function pauseMusic() {
+            bgMusic.pause();
+            isPlaying = false;
+            musicIconPlay.style.display = 'block';
+            musicIconPause.style.display = 'none';
+        }
+
+        musicToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                pauseMusic();
+            } else {
+                playMusic();
+            }
+        });
+
+        function openInvitation() {
+            playMusic();
+            document.getElementById('opening').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openMapsWanita() {
+            window.open(mapsUrlWanita, '_blank');
+        }
+
+        function openMapsPria() {
+            window.open(mapsUrlPria, '_blank');
+        }
+
+        function initCountdown() {
+            const daysEl = document.getElementById('cdDays');
+            const hoursEl = document.getElementById('cdHours');
+            const minutesEl = document.getElementById('cdMinutes');
+            const secondsEl = document.getElementById('cdSeconds');
+            const passedMsgEl = document.getElementById('eventPassedMessage');
+
+            function updateTimer() {
+                const now = new Date().getTime();
+                const distance = eventDate.getTime() - now;
+
+                if (distance < 0) {
+                    daysEl.textContent = "00";
+                    hoursEl.textContent = "00";
+                    minutesEl.textContent = "00";
+                    secondsEl.textContent = "00";
+                    passedMsgEl.style.display = 'block';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysEl.textContent = days < 10 ? '0' + days : days;
+                hoursEl.textContent = hours < 10 ? '0' + hours : hours;
+                minutesEl.textContent = minutes < 10 ? '0' + minutes : minutes;
+                secondsEl.textContent = seconds < 10 ? '0' + seconds : seconds;
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        async function handleRSVP(event) {
+            event.preventDefault();
+
+            const btnSubmit = document.getElementById('btnRsvpSubmit');
+            const alertSuccess = document.getElementById('rsvpAlertSuccess');
+            const alertError = document.getElementById('rsvpAlertError');
+
+            alertSuccess.style.display = 'none';
+            alertError.style.display = 'none';
+
+            const formData = {
+                nama: document.getElementById('rsvpNama').value,
+                status: document.getElementById('rsvpStatus').value,
+                jumlah: document.getElementById('rsvpJumlah').value,
+                pesan: document.getElementById('rsvpPesan').value
+            };
+
+            btnSubmit.disabled = true;
+            btnSubmit.textContent = "Sending...";
+
+            try {
+                if (GOOGLE_SCRIPT_URL === "GANTI_DENGAN_URL_GOOGLE_APPS_SCRIPT") {
+                    setTimeout(() => {
+                        alertSuccess.style.display = 'block';
+                        btnSubmit.disabled = false;
+                        btnSubmit.textContent = "Kirim RSVP";
+                        document.getElementById('rsvpForm').reset();
+                    }, 1000);
+                    return;
+                }
+
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                alertSuccess.style.display = 'block';
+                document.getElementById('rsvpForm').reset();
+            } catch (err) {
+                console.error("Error sending RSVP:", err);
+                alertError.style.display = 'block';
+            } finally {
+                btnSubmit.disabled = false;
+                btnSubmit.textContent = "Kirim RSVP";
+            }
+        }
+
+        function copyToClipboard(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast("Nomor Rekening Berhasil Disalin!");
+            }).catch(err => {
+                console.error("Gagal menyalin:", err);
+            });
+        }
+
+        function copyText(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast("Alamat Berhasil Disalin!");
+            }).catch(err => {
+                console.error("Gagal menyalin:", err);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        // Highlight active bottom navbar tab on scroll
+        const sections = document.querySelectorAll('.section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === `#${id}`) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
